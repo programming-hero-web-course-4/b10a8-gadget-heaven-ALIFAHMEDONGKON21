@@ -1,34 +1,30 @@
 import React from 'react';
 import { NavLink, Outlet, useLoaderData } from 'react-router-dom';
-import Allproduct from './Allproduct';
+
 
 
 const Category = ({categores}) => {
    
     return (
         <div className=' mx-auto'>
-            <div className="grid grid-col
-         py-5 w-1/4 gap-6" aria-label="Tabs">
-        {   
-            
-            categores.map(category=><NavLink
-                to={`category/${category.category}`}
-                className={({ isActive }) =>
-                    `shrink-0 rounded-lg p-2 text-sm font-medium text-center ${
-                        isActive ? "bg-purple-600  text-black" : "hover:bg-purple-700 hover:text-black "
-                    }`
-                }
-                aria-current="page"
-                key={category.category}
-            >
-                {category.category}
-            </NavLink>)
-        }
-
+         
+     <div>
+     <aside className="w-1/4 p-4 bg-gray-100">
+          <h2 className="font-bold text-lg mb-4">Categories</h2>
+          <nav>
+            <NavLink to="/" className="p-2 mb-2">All Products</NavLink>
+            <NavLink to="/category/laptop" className="block mb-2 ">Laptops</NavLink>
+            <NavLink to="/category/phone" className="block mb-2  ">Phones</NavLink>
+            <NavLink to="/category/iphone" className="block mb-2 ">iPhones</NavLink>
+            <NavLink to="/category/smartwatch" className="block mb-2 ">Smart Watches</NavLink>
+            <NavLink to="/category/tv" className="block mb-2 " >TVs</NavLink>
+            <NavLink to="/category/headphones" className="block mb-2 ">Headphones</NavLink>
+          </nav>
+        </aside>
     </div>
         
         <div>
-            <Outlet></Outlet>
+            
            
         </div>
         </div>

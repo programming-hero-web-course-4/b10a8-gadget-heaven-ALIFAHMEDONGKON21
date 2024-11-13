@@ -1,6 +1,6 @@
 [
     {
-        "product_id": "P10022",
+        "product_id": "10022",
         "product_title": "Gaming Laptop G15",
         "product_image": "https://picsum.photos/400/300?random=22",
         "category": "Laptop",
@@ -12,7 +12,7 @@
         "other_field": "RGB backlit keyboard"
     },
     {
-        "product_id": "P10023",
+        "product_id": "10023",
         "product_title": "Android Smartphone X20",
         "product_image": "https://picsum.photos/400/300?random=23",
         "category": "Phone",
@@ -24,7 +24,7 @@
         "other_field": "Fast charging supported"
     },
     {
-        "product_id": "P10024",
+        "product_id": "10024",
         "product_title": "iPhone 13 Pro",
         "product_image": "https://picsum.photos/400/300?random=24",
         "category": "iPhone",
@@ -36,7 +36,7 @@
         "other_field": "Available in multiple colors"
     },
     {
-        "product_id": "P10025",
+        "product_id": "10025",
         "product_title": "Fitness Smartwatch S4",
         "product_image": "https://picsum.photos/400/300?random=25",
         "category": "Smartwatch",
@@ -48,7 +48,7 @@
         "other_field": "Battery lasts up to 10 days"
     },
     {
-        "product_id": "P10026",
+        "product_id": "10026",
         "product_title": "4K LED Smart TV",
         "product_image": "https://picsum.photos/400/300?random=26",
         "category": "TV",
@@ -60,7 +60,7 @@
         "other_field": "Comes with voice-enabled remote"
     },
     {
-        "product_id": "P10027",
+        "product_id": "10027",
         "product_title": "Noise-Canceling Headphones",
         "product_image": "https://picsum.photos/400/300?random=27",
         "category": "Headphones",
@@ -72,7 +72,7 @@
         "other_field": "Includes carrying case"
     },
     {
-        "product_id": "P10028",
+        "product_id": "10028",
         "product_title": "Ultrabook Laptop 14",
         "product_image": "https://i.ibb.co.com/6Y5j2bY/luca-bravo-9l-326-FISzk-unsplash.jpg",
         "category": "Laptop",
@@ -84,7 +84,7 @@
         "other_field": "Available in silver and black"
     },
     {
-        "product_id": "P10029",
+        "product_id": "10029",
         "product_title": "Budget Smartphone A10",
         "product_image": "https://picsum.photos/400/300?random=29",
         "category": "Phone",
@@ -96,7 +96,7 @@
         "other_field": "Available in blue and gray"
     },
     {
-        "product_id": "P10030",
+        "product_id": "10030",
         "product_title": "Apple iPhone SE",
         "product_image": "https://picsum.photos/400/300?random=30",
         "category": "iPhone",
@@ -108,7 +108,7 @@
         "other_field": "Available in black, white, and red"
     },
     {
-        "product_id": "P10031",
+        "product_id": "10031",
         "product_title": "Sports Smartwatch X3",
         "product_image": "https://picsum.photos/400/300?random=31",
         "category": "Smartwatch",
@@ -120,7 +120,7 @@
         "other_field": "Battery lasts up to 14 days"
     },
     {
-        "product_id": "P10032",
+        "product_id": "10032",
         "product_title": "OLED Smart TV 65",
         "product_image": "https://picsum.photos/400/300?random=32",
         "category": "TV",
@@ -132,7 +132,7 @@
         "other_field": "Wall-mountable"
     },
     {
-        "product_id": "P10033",
+        "product_id": "10033",
         "product_title": "Over-Ear Headphones HD",
         "product_image": "https://i.ibb.co.com/NtzX8hk/istockphoto-611077240-1024x1024.jpg",
         "category": "Headphones",

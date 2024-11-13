@@ -7,21 +7,23 @@ import Category from '../../components/Category';
 import Allproduct from '../../components/Allproduct';
 
 const Home = () => {
-    const categores=useLoaderData();
-    console.log(categores)
+    const data =useLoaderData();
+    console.log(data)
+    
     return (
         <div>
            
             <HomePageBanner></HomePageBanner>
             <HomeBanner></HomeBanner>
-            <div className=' min-h-[calc(100vh-242px)]  container mx-auto py-12 px-12'>
-            <Outlet></Outlet>
-            </div>
+            <div className=' min-h-[calc(100vh-900px)]  container mx-auto py-12 px-12'>
+            
+           
 
-            <div className='flex w-11/12 mx-auto'>
-            <Category categores={categores} ></Category>
+            <div className='flex w-11/12 mx-auto mt-80'>
+            <Category ></Category>
             <Allproduct></Allproduct>
-
+            
+            </div>
             </div>
             <Footer></Footer>
         </div>
