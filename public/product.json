@@ -2,7 +2,7 @@
     {
         "product_id": "10022",
         "product_title": "Gaming Laptop G15",
-        "product_image": "https://picsum.photos/400/300?random=22",
+        "product_image": "https://i.ibb.co.com/R9DHHp3/mahavir-shah-gt-Zxq2-Rpa-Y-unsplash.jpg",
         "category": "Laptop",
         "price": 1399.99,
         "description": "High-performance gaming laptop with powerful GPU and fast refresh rate.",
@@ -14,7 +14,7 @@
     {
         "product_id": "10023",
         "product_title": "Android Smartphone X20",
-        "product_image": "https://picsum.photos/400/300?random=23",
+        "product_image": "https://i.ibb.co.com/gJzFhn4/daniel-romero-ai-UAx-BNe3-Xk-unsplash.jpg",
         "category": "Phone",
         "price": 499.99,
         "description": "Sleek smartphone with high-resolution display and long battery life.",
@@ -25,8 +25,8 @@
     },
     {
         "product_id": "10024",
-        "product_title": "iPhone 13 Pro",
-        "product_image": "https://picsum.photos/400/300?random=24",
+        "product_title": "iPhone 13 Pro Phone",
+        "product_image": "https://i.ibb.co.com/f0N4xHr/sophia-stark-Bf-D3tp5v78-unsplash.jpg",
         "category": "iPhone",
         "price": 999.99,
         "description": "Advanced smartphone with powerful processor and enhanced camera features.",
@@ -38,7 +38,7 @@
     {
         "product_id": "10025",
         "product_title": "Fitness Smartwatch S4",
-        "product_image": "https://picsum.photos/400/300?random=25",
+        "product_image": "https://i.ibb.co.com/d53SZGD/artur-luczka-z-Ik-V81-RVw-YY-unsplash.jpg",
         "category": "Smartwatch",
         "price": 199.99,
         "description": "Fitness-focused smartwatch with heart rate monitoring and GPS tracking.",
@@ -50,7 +50,7 @@
     {
         "product_id": "10026",
         "product_title": "4K LED Smart TV",
-        "product_image": "https://picsum.photos/400/300?random=26",
+        "product_image": "https://i.ibb.co.com/T1hkG6v/jens-kreuter-ng-Mts-E5r9e-I-unsplash.jpg",
         "category": "TV",
         "price": 699.99,
         "description": "4K Ultra HD Smart TV with HDR support for vivid colors and sharp images.",
@@ -61,8 +61,8 @@
     },
     {
         "product_id": "10027",
-        "product_title": "Noise-Canceling Headphones",
-        "product_image": "https://picsum.photos/400/300?random=27",
+        "product_title": "Noise-Canceling ",
+        "product_image": "https://i.ibb.co.com/zWddLXZ/theregisti-TUBEp7-DPL9o-unsplash.jpghttps://i.ibb.co.com/c8268Lr/theregisti-Yw-JGDLKOE48-unsplash.jpg",
         "category": "Headphones",
         "price": 149.99,
         "description": "High-quality noise-canceling headphones with crystal-clear sound.",
@@ -86,7 +86,7 @@
     {
         "product_id": "10029",
         "product_title": "Budget Smartphone A10",
-        "product_image": "https://picsum.photos/400/300?random=29",
+        "product_image": "https://i.ibb.co.com/fYNHWWL/mika-baumeister-Ds-Jw-V-Wz-4-unsplash.jpg",
         "category": "Phone",
         "price": 199.99,
         "description": "Affordable smartphone with essential features and a reliable performance.",
@@ -98,7 +98,7 @@
     {
         "product_id": "10030",
         "product_title": "Apple iPhone SE",
-        "product_image": "https://picsum.photos/400/300?random=30",
+        "product_image": "https://i.ibb.co.com/LPQdntw/goran-ivos-j6-Yg-7k7u-E-unsplash.jpg",
         "category": "iPhone",
         "price": 399.99,
         "description": "Compact iPhone model with powerful performance in a small form factor.",
@@ -110,7 +110,7 @@
     {
         "product_id": "10031",
         "product_title": "Sports Smartwatch X3",
-        "product_image": "https://picsum.photos/400/300?random=31",
+        "product_image": "https://i.ibb.co.com/MSM3fD3/alvan-nee-vhv-H46-ASx-H0-unsplash.jpg",
         "category": "Smartwatch",
         "price": 149.99,
         "description": "Rugged smartwatch designed for sports enthusiasts with multiple workout modes.",
@@ -122,7 +122,7 @@
     {
         "product_id": "10032",
         "product_title": "OLED Smart TV 65",
-        "product_image": "https://picsum.photos/400/300?random=32",
+        "product_image": "https://i.ibb.co.com/NtzX8hk/istockphoto-611077240-1024x1024.jpg",
         "category": "TV",
         "price": 1499.99,
         "description": "65-inch OLED Smart TV with deep blacks and vibrant colors for immersive viewing.",
@@ -134,7 +134,7 @@
     {
         "product_id": "10033",
         "product_title": "Over-Ear Headphones HD",
-        "product_image": "https://i.ibb.co.com/NtzX8hk/istockphoto-611077240-1024x1024.jpg",
+        "product_image": "https://i.ibb.co.com/zWddLXZ/theregisti-TUBEp7-DPL9o-unsplash.jpg",
         "category": "Headphones",
         "price": 89.99,
         "description": "Comfortable over-ear headphones with high-definition sound quality.",

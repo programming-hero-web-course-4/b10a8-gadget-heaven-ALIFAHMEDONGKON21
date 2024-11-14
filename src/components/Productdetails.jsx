@@ -2,6 +2,10 @@ import React from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { FaCartPlus } from "react-icons/fa6";
 import { GiSelfLove } from "react-icons/gi";
+import { CiShoppingCart } from "react-icons/ci";
+import { IoHeartDislikeOutline } from "react-icons/io5";
+import { addtowishlist } from '../uT/addcartjavasrict';
+
 
 const Productdetails = () => {
   const data = useLoaderData();
@@ -32,9 +36,16 @@ const Productdetails = () => {
     return <div>Product not found for ID: {id}</div>;
   }
 
-  const { product_title } = productDetails;
+
+  
+  const { product_title ,product_image,category,price,description,specifications,availability,rating} = productDetails;
 
   console.log("Product title:", product_title);  // Log the product title
+
+
+  const handleread=(id)=>{
+    addtowishlist(id)
+}
 
   return (
     <div>
@@ -69,11 +80,77 @@ const Productdetails = () => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-20 z-20 bg-white border-2 ">
             
             
-            <div className=' border-red-200 -mt-52 bg-white'>
-           <p className=' text-black'>{product_title}</p>
+            <div className=' rounded-lg flex  -mt-52 bg-white p-5'>
+           
+           <div className='w-1/2 p-5 rounded-lg '>
+            <img className='w-full rounded-lg' src={product_image} alt="" />
+           </div>
+           <div  className='text-black text-center w-1/2'>
+            <p className='font-bold text-xl'>{product_title}</p>
+            <p className='font-bold text-sm'> price: $ {price}</p>
+            <button className='text-green-400'>{availability}</button>
+            <p>specifications</p>
+            <p className='text-gray-400'>{specifications.map(s=><h1>{s}</h1>)}</p>
+            <p>rating</p>
+            
+            <div className="rating">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input
+    type="radio"
+    name="rating-2"
+    className="mask mask-star-2 bg-orange-400"
+    defaultChecked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+</div>
+<div className='flex gap-10  items-center justify-center text-center'>
+  
+  <button className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
+           </button>
+           <p onClick={()=>handleread(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
+           </p>
+           </div>
+           </div>
+          
             </div>
        
     </div>
+            
+        </div>
+
+
+        {/* footer */}
+
+        <div className='p-20 mt-10 '>
+            <p className='text-2xl  font-bold text-center'>Gadget Heaven</p>
+            <p className=' text-center'>Leading the way in cutting-edge technology and innovation.</p>
+            <div className=' border-b-2 py-2'></div>
+            <div className='flex justify-between mt-10'>
+                <div className='py-2'>
+                    <h3 className='font-bold'>Services</h3>
+                    <p>Product Support</p>
+                    <p>Order Tracking</p>
+                    <p>Shipping & Delivery</p>
+                    <p>Returns</p>
+
+                </div>
+                <div>
+                   <p className='font-bold'>Company</p>
+                   <p>About Us</p>
+                   <p>Careers</p>
+                   <p>Contact</p>
+                </div>
+
+                <div>
+                    <p className='font-bold'>Legal</p>
+                    <p>Terms of Servicey</p>
+                   <p>Privacy Policy
+                   </p>
+                   <p>Cookie Policy</p>
+                </div>
+            </div>
+
             
         </div>
     </div>
