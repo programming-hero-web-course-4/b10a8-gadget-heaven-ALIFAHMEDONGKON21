@@ -9,10 +9,10 @@ const Category = ({categores}) => {
         <div className=' mx-auto'>
          
      <div>
-     <aside className="w-1/4 p-4 bg-gray-100">
-          <h2 className="font-bold text-lg mb-4">Categories</h2>
-          <nav>
-            <NavLink to="/" className="p-2 mb-2">All Products</NavLink>
+     <aside className="w-1/4 p-4 ">
+          
+          <nav className=' border-red-200'>
+            <NavLink to="/" className="   text-xl font-bold ">All Products</NavLink>
             <NavLink to="/category/laptop" className="block mb-2 ">Laptops</NavLink>
             <NavLink to="/category/phone" className="block mb-2  ">Phones</NavLink>
             <NavLink to="/category/iphone" className="block mb-2 ">iPhones</NavLink>
@@ -23,6 +23,7 @@ const Category = ({categores}) => {
         </aside>
     </div>
         
+
         <div>
             
            

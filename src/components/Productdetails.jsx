@@ -5,6 +5,7 @@ import { GiSelfLove } from "react-icons/gi";
 import { CiShoppingCart } from "react-icons/ci";
 import { IoHeartDislikeOutline } from "react-icons/io5";
 import { addtowishlist } from '../uT/addcartjavasrict';
+import { addtowishlist2 } from '../uT/addwishcartjavasrict';
 
 
 const Productdetails = () => {
@@ -46,7 +47,10 @@ const Productdetails = () => {
   const handleread=(id)=>{
     addtowishlist(id)
 }
-
+ const hanlewish=(id)=>
+ {
+  addtowishlist2(id);
+ }
   return (
     <div>
       <div className="relative bg-purple-700 h-96 text-center text-white">
@@ -106,9 +110,9 @@ const Productdetails = () => {
 </div>
 <div className='flex gap-10  items-center justify-center text-center'>
   
-  <button className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
+  <button  onClick={()=>handleread(productDetails)} className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
            </button>
-           <p onClick={()=>handleread(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
+           <p onClick={()=>hanlewish(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
            </p>
            </div>
            </div>

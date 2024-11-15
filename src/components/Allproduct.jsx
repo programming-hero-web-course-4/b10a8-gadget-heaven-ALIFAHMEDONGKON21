@@ -31,7 +31,7 @@ const Allproduct = () => {
 
     return (
         <div className='w-3/4 mx-auto'>
-           
+           <h1 className=' text-3xl font-bold p-1 '>Explore Cutting-Edge Gadgets</h1>
             <div className='grid grid-cols-3 gap-5'>
                 {filteredProducts.map((product) => (
                     <Product key={product.product_id} product={product} />
