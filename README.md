@@ -2,7 +2,7 @@
 ✨ Explore and shop for the latest gadgets with ease!
 
 🚀 Live Website
-
+:https://polite-puppy-b2739c.netlify.app/
 Requirement Document
 📂 Access the requirement document via Siterkar:
 
