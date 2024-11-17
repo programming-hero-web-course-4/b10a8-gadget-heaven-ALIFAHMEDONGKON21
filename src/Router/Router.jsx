@@ -9,6 +9,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Allproduct from "../components/Allproduct";
 import Productdetails from "../components/Productdetails";
 import Dashboard from "../pages/Dashboard";
+import ContactUS from "../pages/ContactUS";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
     path:'/dashboard',
     element:<Dashboard></Dashboard>,
     loader:()=>fetch('/product.json')
+    },
+    {
+     path:'/contact-us',
+     element:<ContactUS></ContactUS>
     },
   ],
   // {

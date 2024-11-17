@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { getaddwish } from '../uT/addcartjavasrict';
@@ -5,33 +8,84 @@ import Addcart from './Addcart';
 import { FaCartPlus } from "react-icons/fa6";
 import { GiSelfLove } from "react-icons/gi";
 
+import { useNavigate } from 'react-router-dom';
+
+
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Footer from '../components/Footer';
 import { getaddwish2 } from '../uT/addwishcartjavasrict';
 import WishCard from './WishCard';
 
+import modalphoto from '../assets/Group.png'
+
+
 const Dashboard = () => {
+    const navigate = useNavigate();
+
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [showModal, setShowModal] = useState(false);
     const data=useLoaderData()
     const[productloact, setproductlocat]=useState(data);
 
     useEffect(()=>{
      const storgeproduct=getaddwish();
      setproductlocat(storgeproduct);
+    
     },[])
     const[productloact2, setproductlocat2]=useState(data);
 
     useEffect(()=>{
      const storgeproduct2=getaddwish2();
-     setproductlocat2(storgeproduct2);
+      setproductlocat2(storgeproduct2);
+     
     },[])
 
     const [totalcost ,setotaolcost]=useState(0);
+
+    const [view, setView] = useState('cart');
 
     useEffect(()=>{
     setotaolcost(0+totalcost);
     },[])
     
+
+  
+    const handlesort= (type) => {
+        const sortedData = [...productloact];
+        if (type === 'price') {
+            sortedData.sort((a, b) => a.price - b.price); // Assuming each item has a `price` property
+        }
+        setproductlocat(sortedData);
+    };
+
+    useEffect(() => {
+        const calculateTotalPrice = productloact.reduce((sum, item) => sum + (item.price || 0), 0);
+        setTotalPrice(calculateTotalPrice);
+    }, [productloact]);
+
+    const handlePurchase = () => {
+        if (totalPrice > 0) {
+            setShowModal(true); // Show the modal
+            
+            setTimeout(() => {
+        
+                setproductlocat([]); 
+                localStorage.removeItem("wish-list"); // Adjust the key name if needed
+                
+                
+                setTotalPrice(0);
+            }, 5000);
+
+
+        } else {
+            toast("Your cart is empty. Please add items before purchasing!");
+        }
+    };
+
+
+
+   
     return (
         <div>
            <div className=" bg-purple-700 h-auto text-center text-white">
@@ -43,6 +97,7 @@ const Dashboard = () => {
                     <Link to="/" className="hover:text-gray-300">Home</Link>
                     <Link to="/statistics" className="hover:text-gray-300">Statistics</Link>
                     <Link to="/dashboard" className="hover:text-gray-300">Dashboard</Link>
+                    <Link to="/contact-us" className="hover:text-gray-300">contact us</Link>
                 </div>
                 <div className="flex space-x-4">
                     <button><i className="fas fa-shopping-cart"></i> <FaCartPlus></FaCartPlus></button>
@@ -53,7 +108,7 @@ const Dashboard = () => {
             {/* Main Banner Text */}
             <div className=" max-w-2xl mx-auto ">
                 <h1 className="text-4xl font-bold mb-4">
-                Product Details
+                Dasboard
                 </h1>
                 <p className="mb-8">
                 Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
@@ -70,9 +125,9 @@ const Dashboard = () => {
                <div className='flex justify-between '>
             <div ><p className='text-2xl font-bold'>Cart</p></div>
             <div className='flex text-center'>
-                <p className='text-center font-bold  items-center justify-center mt-2 mr-2'>Totol Cost :</p>
-                <button className='btn'>sort by</button>
-                <button className='btn bg-purple-700'>parchase</button>
+                <p className='text-center font-bold  items-center justify-center mt-2 mr-2'>Totol Cost :  ${totalPrice.toFixed(2)}</p>
+                <button onClick={()=>handlesort('price')} className='btn  text-black'>Sort by price</button>
+                <button onClick={handlePurchase} className="btn bg-purple-700">Purchase</button>
             </div>
         </div>
       <h2>{
@@ -80,7 +135,7 @@ const Dashboard = () => {
         }</h2>
     </TabPanel>
     <TabPanel>
-        
+    <p className='text-2xl font-bold flex justify-start'>WishCard</p>
       <h2>
         {
             productloact2.map((singleaddcart2 ,index)=><WishCard key={index} singleaddcart2={singleaddcart2}></WishCard>)
@@ -91,13 +146,44 @@ const Dashboard = () => {
                 </Tabs>
 
 
-                
-            </div>
-</div>
 
-          
-          
+              
+
+            
+</div>
+</div>
+           
+{showModal && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white p-8 rounded shadow-lg text-center">
+                        <img className=' mx-auto' src={modalphoto}alt="" />
+                        <h2 className="text-2xl font-bold mb-4">Purchase Confirmation</h2>
+                        <p className="mb-4">Your total price is: ${totalPrice.toFixed(2)}</p>
+                        <button
+                            onClick={() =>{ setShowModal(false);       navigate('/'); // Navigate to home
+                            }}
+                            className="btn bg-purple-700 text-white px-4 py-2 rounded"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
+    
         <Footer></Footer>
+        <ToastContainer
+     position="top-center"
+     autoClose={5000}
+     hideProgressBar={false}
+     newestOnTop={false}
+     closeOnClick
+     rtl={false}
+     pauseOnFocusLoss
+     draggable
+     pauseOnHover
+     theme="light"
+     transition: Bounce
+     ></ToastContainer>
         </div>
     );
 };

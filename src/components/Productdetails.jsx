@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { FaCartPlus } from "react-icons/fa6";
 import { GiSelfLove } from "react-icons/gi";
@@ -6,12 +6,14 @@ import { CiShoppingCart } from "react-icons/ci";
 import { IoHeartDislikeOutline } from "react-icons/io5";
 import { addtowishlist } from '../uT/addcartjavasrict';
 import { addtowishlist2 } from '../uT/addwishcartjavasrict';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Productdetails = () => {
   const data = useLoaderData();
   const { productId } = useParams();
   const id = parseInt(productId);
+  
 
   console.log("Product ID from URL:", productId);  // Log the URL product ID
   console.log("Converted Product ID:", id);  // Log the converted ID
@@ -42,15 +44,46 @@ const Productdetails = () => {
   const { product_title ,product_image,category,price,description,specifications,availability,rating} = productDetails;
 
   console.log("Product title:", product_title);  // Log the product title
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
 
   const handleread=(id)=>{
     addtowishlist(id)
+    toast.success("Product added to the cart!");
 }
  const hanlewish=(id)=>
  {
   addtowishlist2(id);
+  toast.success("Product added to the wish!");
  }
+
+
+ const handleAddToCart = (product) => {
+  const exists = cart.some((item) => item.product_id === product.product_id);
+  if (exists) {
+    toast.error("Product is already in the cart!");
+  } else {
+    setCart([...cart, product]);
+    addtowishlist(product)
+    toast.success("Product added to the cart!");
+  }
+};
+
+
+const handleAddToWishlist = (product) => {
+  const exists = wishlist.some(
+    (item) => item.product_id === product.product_id
+  );
+  if (exists) {
+    toast.error("Product is already in the wishlist!");
+  } else {
+    setWishlist([...wishlist, product]);
+    addtowishlist2(product)
+    toast.success("Product added to the wishlist!");
+  }
+};
+
   return (
     <div>
       <div className="relative bg-purple-700 h-96 text-center text-white">
@@ -62,6 +95,7 @@ const Productdetails = () => {
                     <Link to="/" className="hover:text-gray-300">Home</Link>
                     <Link to="/statistics" className="hover:text-gray-300">Statistics</Link>
                     <Link to="/dashboard" className="hover:text-gray-300">Dashboard</Link>
+                    <Link to="/contact-us" className="hover:text-gray-300">contact us</Link>
                 </div>
                 <div className="flex space-x-4">
                     <button><i className="fas fa-shopping-cart"></i> <FaCartPlus></FaCartPlus></button>
@@ -110,9 +144,9 @@ const Productdetails = () => {
 </div>
 <div className='flex gap-10  items-center justify-center text-center'>
   
-  <button  onClick={()=>handleread(productDetails)} className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
+  <button  onClick={() => handleAddToCart(productDetails)} className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
            </button>
-           <p onClick={()=>hanlewish(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
+           <p onClick={()=>handleAddToWishlist(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
            </p>
            </div>
            </div>
@@ -157,6 +191,8 @@ const Productdetails = () => {
 
             
         </div>
+        
+        <ToastContainer position="top-center"></ToastContainer>
     </div>
   );
 };

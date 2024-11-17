@@ -5,7 +5,9 @@ import Footer from '../../components/Footer';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Category from '../../components/Category';
 import Allproduct from '../../components/Allproduct';
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast('Here is your toast.');
 const Home = () => {
     const data =useLoaderData();
     console.log(data)
@@ -19,13 +21,15 @@ const Home = () => {
             
            
 
-            <div className='flex w-11/12 mx-auto mt-80'>
-            <Category ></Category>
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-80">
+            <Category></Category>
+            
             <Allproduct></Allproduct>
             
             </div>
             </div>
             <Footer></Footer>
+            <Toaster />
         </div>
     );
 };
