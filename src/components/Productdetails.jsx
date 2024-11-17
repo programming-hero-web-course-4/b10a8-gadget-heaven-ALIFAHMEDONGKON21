@@ -81,6 +81,7 @@ const handleAddToWishlist = (product) => {
     setWishlist([...wishlist, product]);
     addtowishlist2(product)
     toast.success("Product added to the wishlist!");
+    
   }
 };
 
@@ -146,7 +147,7 @@ const handleAddToWishlist = (product) => {
   
   <button  onClick={() => handleAddToCart(productDetails)} className='bg-purple-700 text-white p-1  items-center justify-center rounded-lg flex  gap-2'>add to card <CiShoppingCart />
            </button>
-           <p onClick={()=>handleAddToWishlist(productDetails)} className='text-2xl'><IoHeartDislikeOutline />
+           <p onClick={()=>handleAddToWishlist(productDetails)} ><IoHeartDislikeOutline />
            </p>
            </div>
            </div>

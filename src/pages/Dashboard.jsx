@@ -50,6 +50,8 @@ const Dashboard = () => {
     },[])
     
 
+ 
+
   
     const handlesort= (type) => {
         const sortedData = [...productloact];
@@ -138,7 +140,7 @@ const Dashboard = () => {
     <p className='text-2xl font-bold flex justify-start'>WishCard</p>
       <h2>
         {
-            productloact2.map((singleaddcart2 ,index)=><WishCard key={index} singleaddcart2={singleaddcart2}></WishCard>)
+            productloact2.map((singleaddcart2 ,index)=><WishCard key={index}  singleaddcart2={singleaddcart2}></WishCard>)
                 
         }
       </h2>
