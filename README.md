@@ -6,7 +6,8 @@
 Requirement Document
 📂 Access the requirement document via Siterkar:
 
-- [User Guide](../GadgetHeaven/docs/Batch-10_Assignment-08.pdf)
+📂 - [User Guide](https://github.com/your-username/your-repo-name/blob/main/GadgetHeaven/docs/Batch-10_Assignment-08.pdf)
+
 
 
 ⚛️ React Fundamental Concepts Used
