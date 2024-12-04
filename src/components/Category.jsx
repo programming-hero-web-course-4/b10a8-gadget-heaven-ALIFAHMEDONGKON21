@@ -9,7 +9,7 @@ const Category = ({categores}) => {
         <div className=' mx-auto'>
          
      <div>
-     <aside className='rounded-lg bg-gray-200 h-auto p-5' >
+     <aside className='rounded-lg bg-white-200 h-auto p-5' >
           
           <nav className=' border-red-200 flex flex-col gap-5 '>
             <NavLink to="/"    className={({ isActive }) => 

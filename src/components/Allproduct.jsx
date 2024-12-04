@@ -30,7 +30,7 @@ const Allproduct = () => {
         : allpro;
 
     return (
-        <div className=' h-auto rounded-lg bg-gray-200 lg:col-span-2'>
+        <div className=' h-auto rounded-lg bg-white-200 lg:col-span-2'>
            <h1 className=' text-3xl font-bold p-1 '>Explore Cutting-Edge Gadgets</h1>
             <div className='grid grid-cols-3 gap-5'>
                 {filteredProducts.map((product) => (
